@@ -1,0 +1,35 @@
+<!-- <div *ngFor="let item of students ">
+<div>{{item}}</div>
+</div> -->
+<!-- jitsinn -->
+<div>
+  <button (click)="getPosts()">GET Posts</button>
+  <button (click)="uploadPosts()">Upload Posts</button>
+   <button (click)="getStudents()">Get Students</button>
+  <!-- <div>
+    <p *ngFor="let item of posts">{{item.title}}</p>
+  </div> -->
+  <div>
+    <div *ngFor="let item of students">
+
+    <div>{{item.email}}</div>
+    <div>{{item.name}}</div>
+    <div>{{item.password}}</div>
+    </div>
+  </div>
+
+  <div class="container">
+<form (click)='addStudents()'>
+  <div class="form-group">
+  <label>Name</label>
+  <input [(ngModel)] ='name' type="text" name="name" class="form-control">
+  <label>Email</label>
+  <input [(ngModel)] ="email" type="text" name="email" class="form-control">
+  <label>Password</label>
+  <input [(ngModel)] ="password" type="text" name="password" class="form-control">
+  <input type="submit" value="Add Student">
+</div>
+</form>
+
+</div>
+</div>

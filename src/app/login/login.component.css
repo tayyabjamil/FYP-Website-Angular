@@ -1,9 +1,9 @@
 
 .body{
-    background-image: url('http://edinborohistory.org/wp-content/uploads/2018/11/invest.jpg');
-    background-size: cover;
     }
-    
+    .img{
+
+    }
     .card{
         border: 1dp;
         border-radius: 1dp;
