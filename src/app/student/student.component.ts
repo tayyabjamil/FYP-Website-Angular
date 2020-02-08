@@ -16,6 +16,7 @@ export class StudentComponent implements OnInit {
   email: string;
   password: string;
   contact = [];
+  image;
   ngOnInit() {
     // this.getStudents();
   }
@@ -44,5 +45,14 @@ this.httpService.createStudent(newContact).subscribe(newContact => {
       console.log(newContact);
 }
   )}
+
+  uploadImage() {
+    const newImage = {
+      image: this.image
+    }
+this.httpService.uploadImage(newImage).subscribe(newImage => {
+  console.log(newImage);
+})
+  }
 }
 

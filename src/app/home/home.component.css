@@ -1,0 +1,12 @@
+.affix {
+  top: 0;
+  width: 100%;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.col-lg-4{
+  height: 600px;
+}
+.page{
+  height: 900px;
+}

@@ -1,7 +1,4 @@
-<!-- <div *ngFor="let item of students ">
-<div>{{item}}</div>
-</div> -->
-<!-- jitsinn -->
+
 <div>
   <button (click)="getPosts()">GET Posts</button>
   <button (click)="uploadPosts()">Upload Posts</button>
@@ -21,15 +18,17 @@
   <div class="container">
 <form (click)='addStudents()'>
   <div class="form-group">
-  <label>Name</label>
-  <input [(ngModel)] ='name' type="text" name="name" class="form-control">
-  <label>Email</label>
-  <input [(ngModel)] ="email" type="text" name="email" class="form-control">
-  <label>Password</label>
-  <input [(ngModel)] ="password" type="text" name="password" class="form-control">
-  <input type="submit" value="Add Student">
-</div>
-</form>
 
+  </div>
+</form>
+<div>
+  <h1>Upload Image</h1>
+<form>
+  <h3>Project Image</h3>
+<input   [(ngModel)] ='image' type="file" name="image" class="form-control">
+<input type="submit" value="upload" (click)="uploadImage()">
+</form>
 </div>
+</div>
+
 </div>

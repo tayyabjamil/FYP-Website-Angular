@@ -1,3 +1,187 @@
-<p>
-  home works!
-</p>
+<body>
+  <div class="jumbotron" style="text-align: center;">
+    <h1>Welcome</h1>
+    <h2>Angular & Bootstrap Demo</h2>
+  </div>
+
+<nav class="navbar navbar-inverse affix" data-spy="affix"  data-offset-top="258" style=" width: 100%; top: 0%;">
+<ul class="nav navbar-nav" style="text-align: right;">
+  <li><a href="#Home" class="active">Home</a></li>
+  <li><a href="#Discover">Discover</a></li>
+  <li><a href="#Project">project</a></li>
+  <li><a href="#Login">Login</a></li>
+</ul>
+</nav>
+
+<div style="background-color: chartreuse;">
+  <div class="container page" style="background-color: crimson;" id="Login" >
+    <h2 style="text-align: center;">User Account</h2>
+
+    <div  >
+      <div >
+        <div class="row"  class="list-group" style="text-align: center;">
+          <div  class="col-sm-4 list-group-item" >
+             <a href="#accountform">Create Account</a>
+          </div>
+          <div class="col-sm-4 list-group-item ">
+              <a href="#loginform" >Login</a>
+          </div>
+          <div  class="col-sm-4 list-group-item ">
+           <a href="#forgetpassform"> Request Password</a>
+          </div>
+
+        </div>
+
+        <form id="accountform">
+          <h1 style="text-align: center;">Create Account</h1>
+          <div class="form-group">
+
+            <label>UserName</label>
+          <input [(ngModel)] ='username' type="text" name="username" class="form-control">
+          <label>Email</label>
+          <input [(ngModel)] ="email" type="text" name="email" class="form-control">
+          <label>Password</label>
+          <input [(ngModel)] ="password" type="text" name="password" class="form-control">
+          <input type="submit" value="createAccount" (click)='createAccount()'>
+        </div>
+        </form>
+
+        <form id="loginform">
+          <h1 style="text-align: center;">Login Account</h1>
+
+          <div class="form-group">
+          <label>Email</label>
+          <input [(ngModel)] ="email" type="text" name="email" class="form-control">
+          <label>Password</label>
+          <input [(ngModel)] ="password" type="text" name="password" class="form-control">
+          <label>Confirm Password</label>
+          <input [(ngModel)] ="confirmPassword" type="text" name="confirmpassword" class="form-control">
+          <input type="submit" value="Login" (click)='login()'>
+
+        </div>
+        </form>
+        <form id="forgetpassform">
+          <h1 style="text-align: center;">Request Password</h1>
+
+          <div class="form-group">
+          <label>UserName</label>
+          <input [(ngModel)] ='username' type="text" name="username" class="form-control">
+          <label>Email</label>
+          <input [(ngModel)] ="email" type="text" name="email" class="form-control">
+
+          <input type="submit" value="find password" >
+        </div>
+        </form>
+
+    </div>
+    </div>
+    </div>
+<div style="background-color: cyan;" >
+    <div id="Home"  class="container" >
+      <div class="row"  >
+        <h1 style="text-align: center;">Home</h1>
+        <div  class="col-lg-4 list-group-item" >
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxoW7cT4Qa245mJZIWnljqwIBFglB59zXPuA5cdcOhT-Ocnkbh&s" class="img-rounded" alt="Cinque Terre">
+          <div *ngFor="let data of projectData">
+            <h3>{{data.title}}</h3>
+            <h4>{{data.type}}</h4>
+           <!-- <div class="progress">
+             <div class="progress-bar" role="progressbar" aria-valuenow="70"
+             aria-valuemin="0" aria-valuemax="100" style="width:60%; height: 20%;">
+               <span class="sr-only">70% Complete</span>
+             </div>
+           </div> -->
+           <h4>{{data.description}}</h4>
+           <h4>{{data.estimateAmount}}</h4>
+         </div>
+
+          <h1>catagories</h1>
+      </div>
+        <div class="col-lg-4 list-group-item ">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHq22Rd05dR60T9UzETRoG8_QfP5LuTi0lhwZYBnBm6IsOL25gDA&s"class="img-rounded" alt="Cinque Terre">
+
+<div *ngFor="let data of projectData">
+         <h3>{{data.title}}</h3>
+         <h4>{{data.type}}</h4>
+        <!-- <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+          aria-valuemin="0" aria-valuemax="100" style="width:60%; height: 20%;">
+            <span class="sr-only">70% Complete</span>
+          </div>
+        </div> -->
+        <h4>{{data.description}}</h4>
+        <h4>{{data.estimateAmount}}</h4>
+      </div>
+
+        <h1>catagories</h1>
+
+        </div>
+        <div  class="col-lg-4 list-group-item ">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFtrdU8WRZma-_2PvfrZbhPEOdkH4WOsFNh7FZkTJNuSVd0N2_Jw&s"class="img-rounded" alt="Cinque Terre">
+
+          <div *ngFor="let data of projectData">
+            <h3>{{data.title}}</h3>
+            <h4>{{data.type}}</h4>
+           <!-- <div class="progress">
+             <div class="progress-bar" role="progressbar" aria-valuenow="70"
+             aria-valuemin="0" aria-valuemax="100" style="width:60%; height: 20%;">
+               <span class="sr-only">70% Complete</span>
+             </div>
+           </div> -->
+           <h4>{{data.description}}</h4>
+           <h4>{{data.estimateAmount}}</h4>
+         </div>
+
+          <h1>catagories</h1>
+
+        </div>
+
+
+      </div>
+</div>
+    </div>
+<div style=" background-color: gray;">
+      <div id="Discover" class="page container" >
+        <h1>Discover</h1>
+        </div>
+      </div>
+      <div style=" background-color: gold;">
+      <div id="Project" class="page container" >
+        <div class="page">
+       <div class="container">
+          <h1 style="text-align: center;">Start new Project</h1>
+          <form>
+            <h3>Project Image</h3>
+    <input   [(ngModel)] ='image' type="file" name="image" class="form-control">
+
+            <h3>Title</h3>
+            <input   [(ngModel)] ='title' type="text" name="title" class="form-control">
+            <h3>Type</h3>
+            <input   [(ngModel)] ='type' type="text" name="type" class="form-control">
+            <h3>Estimate Amount</h3>
+            <input   [(ngModel)] ='estimateAmount' type="text" name="estimateAmount" class="form-control">
+            <h3>Description</h3>
+            <input   [(ngModel)] ='description' type="text" name="description" class="form-control">
+            <input type="submit" value="Post" (click)="project()">
+          </form>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+<!--
+
+  <div data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <ul class="nav navbar-nav">
+      <li><a href="#section1">Section 1</a></li>
+</ul>
+</nav>
+
+  <div id="section1">
+    <h1>Section 1</h1>
+    <p>Try to scroll this page and look at the navigation bar while scrolling!</p>
+  </div> -->
+  </body>
